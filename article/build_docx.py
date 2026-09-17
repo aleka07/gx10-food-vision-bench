@@ -23,7 +23,7 @@ from docx.oxml.ns import qn
 
 FONT = "Times New Roman"
 BODY_PT = 14
-TABLE_PT = 12
+TABLE_PT = 11.5
 CAPTION_PT = 12
 LINE_PT = 16.2          # single spacing for 14 pt Times New Roman in Word
 PAGE_TEXT_HEIGHT_PT = 728.0   # A4 height minus 2 cm margins top and bottom
@@ -149,29 +149,30 @@ def _wrap_lines(text: str, size_pt: float, width_pt: float, first_indent_pt: flo
 def estimate_pages(content, figure_heights_cm: dict[str, float]) -> dict:
     """Rough page count for the assembled document."""
     height = 0.0
-    detail = {}
     for text, size in (
         (content.udc, BODY_PT),
         (content.title, BODY_PT),
         (content.author_line, BODY_PT),
     ):
-        lines = _wrap_lines(text, size, PAGE_TEXT_WIDTH_PT)
-        height += lines * (LINE_PT if size >= BODY_PT else LINE_PT * size / BODY_PT)
-        detail[text[:24]] = lines
-    for text in content.paragraphs:
-        lines = _wrap_lines(text, BODY_PT, PAGE_TEXT_WIDTH_PT, first_indent_pt=28.35)
-        height += lines * LINE_PT
+        height += _wrap_lines(text, size, PAGE_TEXT_WIDTH_PT) * (
+            LINE_PT if size >= BODY_PT else LINE_PT * size / BODY_PT
+        )
     for block in content.blocks:
-        if block["kind"] == "table":
-            height += (len(block["rows"]) + 1) * (TABLE_PT * 1.45 + 2) + CAPTION_PT * 1.5 + 6
+        if block["kind"] == "text":
+            height += _wrap_lines(block["text"], BODY_PT, PAGE_TEXT_WIDTH_PT, 28.35) * LINE_PT
+        elif block["kind"] == "table":
+            height += (len(block["rows"]) + 1) * (TABLE_PT * 1.45 + 2) + CAPTION_PT * 1.6 + 8
         elif block["kind"] == "figure":
             caption_lines = _wrap_lines(block["caption"], CAPTION_PT, PAGE_TEXT_WIDTH_PT)
-            height += figure_heights_cm[block["path"]] * 28.3465 + caption_lines * CAPTION_PT * 1.3 + 6
+            height += figure_heights_cm[block["path"]] * 28.3465 + caption_lines * CAPTION_PT * 1.4 + 8
     height += _wrap_lines("Список литературы:", BODY_PT, PAGE_TEXT_WIDTH_PT) * LINE_PT
     for ref in content.references:
-        height += _wrap_lines(ref, BODY_PT, PAGE_TEXT_WIDTH_PT, first_indent_pt=28.35) * LINE_PT
-    pages = height / PAGE_TEXT_HEIGHT_PT
-    return {"estimated_pages": round(pages, 2), "used_height_pt": round(height, 1), "detail": detail}
+        height += _wrap_lines(ref, BODY_PT, PAGE_TEXT_WIDTH_PT, 28.35) * LINE_PT
+    return {
+        "estimated_pages": round(height / PAGE_TEXT_HEIGHT_PT, 2),
+        "used_height_pt": round(height, 1),
+        "remaining_pt": round(PAGE_TEXT_HEIGHT_PT * 3 - height, 1),
+    }
 
 
 def build(content, out_path: Path, figures_dir: Path) -> dict:
@@ -180,24 +181,16 @@ def build(content, out_path: Path, figures_dir: Path) -> dict:
     para(doc, content.udc, align="left", indent_cm=0.0)
     para(doc, content.title, bold=True, align="center", indent_cm=0.0)
     para(doc, content.author_line, align="center", indent_cm=0.0, space_after_pt=6)
-    for text in content.paragraphs[: content.block_at] if hasattr(content, "block_at") else content.paragraphs:
-        para(doc, text)
 
     figure_heights: dict[str, float] = {}
-    for i, block in enumerate(content.blocks):
-        if block["kind"] == "table":
+    for block in content.blocks:
+        if block["kind"] == "text":
+            para(doc, block["text"])
+        elif block["kind"] == "table":
             add_table(doc, block["caption"], block["headers"], block["rows"])
         elif block["kind"] == "figure":
+            figure_heights[block["path"]] = block["height_cm"]
             add_figure(doc, figures_dir / block["path"], block["width_cm"], block["caption"])
-            figure_heights[block["path"]] = block.get("height_cm", block["width_cm"] * 0.42)
-        if hasattr(content, "block_at") and i + 1 == content.block_at:
-            for text in content.paragraphs[content.block_at :]:
-                para(doc, text)
-    if hasattr(content, "tail_at"):
-        for index, text in enumerate(content.tail_paragraphs, start=content.tail_at):
-            if index < len(content.paragraphs):
-                continue
-            para(doc, text)
 
     para(doc, "Список литературы:", indent_cm=0.0, space_before_pt=6)
     for number, ref in enumerate(content.references, start=1):

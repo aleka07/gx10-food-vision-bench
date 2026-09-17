@@ -15,7 +15,15 @@ import statistics
 from collections import defaultdict
 from pathlib import Path
 
-from common import RESULTS, json_dump
+# Kept import-light on purpose: the aggregation step must run anywhere, even
+# where the CUDA build of PyTorch is absent.
+RESULTS = Path(__file__).resolve().parents[1] / "results"
+
+
+def json_dump(obj, path: Path) -> None:
+    path = Path(path)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(obj, indent=2, ensure_ascii=False), encoding="utf-8")
 
 GROUP_KEYS = ("device", "backbone", "precision", "batch_size", "mode")
 METRICS = (

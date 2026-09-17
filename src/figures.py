@@ -102,14 +102,17 @@ def figure_energy(rows: list[dict], out: Path) -> None:
 
 
 def figure_probe(probe_results: dict[str, dict], out: Path) -> None:
-    fig, ax = plt.subplots(figsize=(3.4, 2.6))
+    fig, ax = plt.subplots(figsize=(3.7, 2.35))
     for backbone, payload in probe_results.items():
-        xs = [p["train_images"] for p in payload["points"]]
+        xs = [p["per_class"] for p in payload["points"]]
         ys = [p["top1"] * 100 for p in payload["points"]]
         ax.plot(xs, ys, marker=MARKERS.get(backbone, "o"), linewidth=1.4, label=LABELS.get(backbone, backbone))
     ax.set_xscale("log")
+    ax.set_xticks([5, 10, 25, 50])
+    ax.set_xticklabels(["5", "10", "25", "50"])
     ax.set_xlabel("изображений на класс в обучающей выборке")
     ax.set_ylabel("top-1, %")
+    ax.set_ylim(20, 66)
     ax.legend(fontsize=7)
     fig.tight_layout()
     fig.savefig(out, bbox_inches="tight")
