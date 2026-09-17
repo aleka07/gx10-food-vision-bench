@@ -1,0 +1,462 @@
+{
+  "files_checked": [
+    "/home/alikhan/work/papers/atu-2026-food-vision-bench/article/article_text.py",
+    "/home/alikhan/work/papers/atu-2026-food-vision-bench/results/bench_raw.json",
+    "/home/alikhan/work/papers/atu-2026-food-vision-bench/results/stand_info.json",
+    "/home/alikhan/work/papers/atu-2026-food-vision-bench/results/probe_seeds/convnext_tiny_s42.json",
+    "/home/alikhan/work/papers/atu-2026-food-vision-bench/results/probe_seeds/convnext_tiny_s43.json",
+    "/home/alikhan/work/papers/atu-2026-food-vision-bench/results/probe_seeds/convnext_tiny_s44.json",
+    "/home/alikhan/work/papers/atu-2026-food-vision-bench/results/probe_seeds/resnet50_s42.json",
+    "/home/alikhan/work/papers/atu-2026-food-vision-bench/results/probe_seeds/resnet50_s43.json",
+    "/home/alikhan/work/papers/atu-2026-food-vision-bench/results/probe_seeds/resnet50_s44.json",
+    "/home/alikhan/work/papers/atu-2026-food-vision-bench/results/probe_seeds/vit_b_16_s42.json",
+    "/home/alikhan/work/papers/atu-2026-food-vision-bench/results/probe_seeds/vit_b_16_s43.json",
+    "/home/alikhan/work/papers/atu-2026-food-vision-bench/results/probe_seeds/vit_b_16_s44.json"
+  ],
+  "checks": [
+    {
+      "article_claim": "каждая конфигурация повторялась трижды",
+      "recomputed": "[3]",
+      "verdict": "совпадает",
+      "comment": ""
+    },
+    {
+      "article_claim": "батчи 1, 8 и 32",
+      "recomputed": "[1, 8, 32]",
+      "verdict": "совпадает",
+      "comment": ""
+    },
+    {
+      "article_claim": "потребление в простое — 4,9 Вт",
+      "recomputed": "mean=4.881 Вт",
+      "verdict": "совпадает",
+      "comment": ""
+    },
+    {
+      "article_claim": "Таблица, ConvNeXt-Tiny, батч 1, только вывод, изобр/с = 629",
+      "recomputed": "629 (629)",
+      "verdict": "совпадает",
+      "comment": ""
+    },
+    {
+      "article_claim": "Таблица, ConvNeXt-Tiny, батч 1, сквозной режим, изобр/с = 496",
+      "recomputed": "496 (496)",
+      "verdict": "совпадает",
+      "comment": ""
+    },
+    {
+      "article_claim": "Таблица, ConvNeXt-Tiny, батч 1, p95 сквозной, мс = 2,8",
+      "recomputed": "2,8 (2.8)",
+      "verdict": "совпадает",
+      "comment": ""
+    },
+    {
+      "article_claim": "Таблица, ConvNeXt-Tiny, батч 1, Дж/изобр = 0,105",
+      "recomputed": "0,105 (0.105)",
+      "verdict": "совпадает",
+      "comment": ""
+    },
+    {
+      "article_claim": "Таблица, ConvNeXt-Tiny, батч 8, только вывод, изобр/с = 1653",
+      "recomputed": "1653 (1653)",
+      "verdict": "совпадает",
+      "comment": ""
+    },
+    {
+      "article_claim": "Таблица, ConvNeXt-Tiny, батч 8, сквозной режим, изобр/с = 1370",
+      "recomputed": "1370 (1370)",
+      "verdict": "совпадает",
+      "comment": ""
+    },
+    {
+      "article_claim": "Таблица, ConvNeXt-Tiny, батч 8, p95 сквозной, мс = 5,8",
+      "recomputed": "5,8 (5.8)",
+      "verdict": "совпадает",
+      "comment": ""
+    },
+    {
+      "article_claim": "Таблица, ConvNeXt-Tiny, батч 8, Дж/изобр = 0,045",
+      "recomputed": "0,045 (0.045)",
+      "verdict": "совпадает",
+      "comment": ""
+    },
+    {
+      "article_claim": "Таблица, ConvNeXt-Tiny, батч 32, только вывод, изобр/с = 1680",
+      "recomputed": "1680 (1680)",
+      "verdict": "совпадает",
+      "comment": ""
+    },
+    {
+      "article_claim": "Таблица, ConvNeXt-Tiny, батч 32, сквозной режим, изобр/с = 1326",
+      "recomputed": "1326 (1326)",
+      "verdict": "совпадает",
+      "comment": ""
+    },
+    {
+      "article_claim": "Таблица, ConvNeXt-Tiny, батч 32, p95 сквозной, мс = 23,5",
+      "recomputed": "23,5 (23.5)",
+      "verdict": "совпадает",
+      "comment": ""
+    },
+    {
+      "article_claim": "Таблица, ConvNeXt-Tiny, батч 32, Дж/изобр = 0,044",
+      "recomputed": "0,044 (0.044)",
+      "verdict": "совпадает",
+      "comment": ""
+    },
+    {
+      "article_claim": "Таблица, ResNet-50, батч 1, только вывод, изобр/с = 542",
+      "recomputed": "542 (542)",
+      "verdict": "совпадает",
+      "comment": ""
+    },
+    {
+      "article_claim": "Таблица, ResNet-50, батч 1, сквозной режим, изобр/с = 384",
+      "recomputed": "384 (384)",
+      "verdict": "совпадает",
+      "comment": ""
+    },
+    {
+      "article_claim": "Таблица, ResNet-50, батч 1, p95 сквозной, мс = 3,5",
+      "recomputed": "3,5 (3.5)",
+      "verdict": "совпадает",
+      "comment": ""
+    },
+    {
+      "article_claim": "Таблица, ResNet-50, батч 1, Дж/изобр = 0,103",
+      "recomputed": "0,103 (0.103)",
+      "verdict": "совпадает",
+      "comment": ""
+    },
+    {
+      "article_claim": "Таблица, ResNet-50, батч 8, только вывод, изобр/с = 1433",
+      "recomputed": "1433 (1433)",
+      "verdict": "совпадает",
+      "comment": ""
+    },
+    {
+      "article_claim": "Таблица, ResNet-50, батч 8, сквозной режим, изобр/с = 1172",
+      "recomputed": "1172 (1172)",
+      "verdict": "совпадает",
+      "comment": ""
+    },
+    {
+      "article_claim": "Таблица, ResNet-50, батч 8, p95 сквозной, мс = 6,9",
+      "recomputed": "6,9 (6.9)",
+      "verdict": "совпадает",
+      "comment": ""
+    },
+    {
+      "article_claim": "Таблица, ResNet-50, батч 8, Дж/изобр = 0,050",
+      "recomputed": "0,050 (0.050)",
+      "verdict": "совпадает",
+      "comment": ""
+    },
+    {
+      "article_claim": "Таблица, ResNet-50, батч 32, только вывод, изобр/с = 1270",
+      "recomputed": "1270 (1270)",
+      "verdict": "совпадает",
+      "comment": ""
+    },
+    {
+      "article_claim": "Таблица, ResNet-50, батч 32, сквозной режим, изобр/с = 1042",
+      "recomputed": "1042 (1042)",
+      "verdict": "совпадает",
+      "comment": ""
+    },
+    {
+      "article_claim": "Таблица, ResNet-50, батч 32, p95 сквозной, мс = 29,6",
+      "recomputed": "29,6 (29.6)",
+      "verdict": "совпадает",
+      "comment": ""
+    },
+    {
+      "article_claim": "Таблица, ResNet-50, батч 32, Дж/изобр = 0,050",
+      "recomputed": "0,050 (0.050)",
+      "verdict": "совпадает",
+      "comment": ""
+    },
+    {
+      "article_claim": "Таблица, ViT-B/16, батч 1, только вывод, изобр/с = 562",
+      "recomputed": "562 (562)",
+      "verdict": "совпадает",
+      "comment": ""
+    },
+    {
+      "article_claim": "Таблица, ViT-B/16, батч 1, сквозной режим, изобр/с = 462",
+      "recomputed": "462 (462)",
+      "verdict": "совпадает",
+      "comment": ""
+    },
+    {
+      "article_claim": "Таблица, ViT-B/16, батч 1, p95 сквозной, мс = 2,6",
+      "recomputed": "2,6 (2.6)",
+      "verdict": "совпадает",
+      "comment": ""
+    },
+    {
+      "article_claim": "Таблица, ViT-B/16, батч 1, Дж/изобр = 0,151",
+      "recomputed": "0,151 (0.151)",
+      "verdict": "совпадает",
+      "comment": ""
+    },
+    {
+      "article_claim": "Таблица, ViT-B/16, батч 8, только вывод, изобр/с = 1311",
+      "recomputed": "1311 (1311)",
+      "verdict": "совпадает",
+      "comment": ""
+    },
+    {
+      "article_claim": "Таблица, ViT-B/16, батч 8, сквозной режим, изобр/с = 1093",
+      "recomputed": "1093 (1093)",
+      "verdict": "совпадает",
+      "comment": ""
+    },
+    {
+      "article_claim": "Таблица, ViT-B/16, батч 8, p95 сквозной, мс = 7,0",
+      "recomputed": "7,0 (7.0)",
+      "verdict": "совпадает",
+      "comment": ""
+    },
+    {
+      "article_claim": "Таблица, ViT-B/16, батч 8, Дж/изобр = 0,064",
+      "recomputed": "0,064 (0.064)",
+      "verdict": "совпадает",
+      "comment": ""
+    },
+    {
+      "article_claim": "Таблица, ViT-B/16, батч 32, только вывод, изобр/с = 1240",
+      "recomputed": "1240 (1240)",
+      "verdict": "совпадает",
+      "comment": ""
+    },
+    {
+      "article_claim": "Таблица, ViT-B/16, батч 32, сквозной режим, изобр/с = 988",
+      "recomputed": "988 (988)",
+      "verdict": "совпадает",
+      "comment": ""
+    },
+    {
+      "article_claim": "Таблица, ViT-B/16, батч 32, p95 сквозной, мс = 28,9",
+      "recomputed": "28,9 (28.9)",
+      "verdict": "совпадает",
+      "comment": ""
+    },
+    {
+      "article_claim": "Таблица, ViT-B/16, батч 32, Дж/изобр = 0,070",
+      "recomputed": "0,070 (0.070)",
+      "verdict": "совпадает",
+      "comment": ""
+    },
+    {
+      "article_claim": "«ConvNeXt-Tiny» на батче 32 в режиме «только вывод» = 1680 изобр/с",
+      "recomputed": "1680",
+      "verdict": "совпадает",
+      "comment": ""
+    },
+    {
+      "article_claim": "«ResNet-50» на батче 32 в режиме «только вывод» = 1270 изобр/с",
+      "recomputed": "1270",
+      "verdict": "совпадает",
+      "comment": ""
+    },
+    {
+      "article_claim": "«ViT-B/16» на батче 32 в режиме «только вывод» = 1240 изобр/с",
+      "recomputed": "1240",
+      "verdict": "совпадает",
+      "comment": ""
+    },
+    {
+      "article_claim": "«ConvNeXt-Tiny» на батче 8 сквозным режимом = 1370 изобр/с и 0,045 Дж",
+      "recomputed": "1370 изобр/с, 0,045 Дж",
+      "verdict": "совпадает",
+      "comment": ""
+    },
+    {
+      "article_claim": "«ViT-B/16» на батче 8 сквозным режимом = 1093 изобр/с и 0,064 Дж",
+      "recomputed": "1093 изобр/с, 0,064 Дж",
+      "verdict": "совпадает",
+      "comment": ""
+    },
+    {
+      "article_claim": "расхождение режимов достигает 29 %",
+      "recomputed": "max=29.23 %",
+      "verdict": "совпадает",
+      "comment": ""
+    },
+    {
+      "article_claim": "CPU, ConvNeXt-Tiny, батч 32 = 39,4 изобр/с",
+      "recomputed": "39,4",
+      "verdict": "совпадает",
+      "comment": ""
+    },
+    {
+      "article_claim": "CPU, ViT-B/16, батч 32 = 14,9 изобр/с",
+      "recomputed": "14,9",
+      "verdict": "совпадает",
+      "comment": ""
+    },
+    {
+      "article_claim": "CPU, ConvNeXt-Tiny, батч 1 = 17,4 изобр/с",
+      "recomputed": "17,4",
+      "verdict": "совпадает",
+      "comment": ""
+    },
+    {
+      "article_claim": "CPU, ViT-B/16, батч 1 = 8,2 изобр/с",
+      "recomputed": "8,2",
+      "verdict": "совпадает",
+      "comment": ""
+    },
+    {
+      "article_claim": "ускорение на GPU от 36 до 106 раз",
+      "recomputed": "35.82–106.21×",
+      "verdict": "совпадает",
+      "comment": ""
+    },
+    {
+      "article_claim": "энергия ниже в 8,7–16,5 раза",
+      "recomputed": "8.71–16.52×",
+      "verdict": "совпадает",
+      "comment": ""
+    },
+    {
+      "article_claim": "FP16 против FP32 по скорости: в 1,8–3,6 раза",
+      "recomputed": "1.83–3.57×",
+      "verdict": "совпадает",
+      "comment": ""
+    },
+    {
+      "article_claim": "FP16 против FP32 по энергии: в 1,7–4,5 раза",
+      "recomputed": "1.73–4.49×",
+      "verdict": "совпадает",
+      "comment": ""
+    },
+    {
+      "article_claim": "лучшая конфигурация — около 12,3 Вт·ч на миллион изображений",
+      "recomputed": "12.33 Вт·ч",
+      "verdict": "совпадает",
+      "comment": ""
+    },
+    {
+      "article_claim": "процессорная конфигурация — около 98 Вт·ч на миллион изображений",
+      "recomputed": "97.72 Вт·ч",
+      "verdict": "совпадает",
+      "comment": ""
+    },
+    {
+      "article_claim": "«почти в 8 раз экономичнее»",
+      "recomputed": "7.92×",
+      "verdict": "совпадает",
+      "comment": ""
+    },
+    {
+      "article_claim": "эквивалентны примерно 46 потокам по 30 кадров/с",
+      "recomputed": "45.68",
+      "verdict": "совпадает",
+      "comment": ""
+    },
+    {
+      "article_claim": "зонд, ViT-B/16, 50 изображений/класс = 62,1 %",
+      "recomputed": "62,1",
+      "verdict": "совпадает",
+      "comment": ""
+    },
+    {
+      "article_claim": "зонд, ConvNeXt-Tiny, 50 изображений/класс = 60,9 %",
+      "recomputed": "60,9",
+      "verdict": "совпадает",
+      "comment": ""
+    },
+    {
+      "article_claim": "зонд, ResNet-50, 50 изображений/класс = 47,2 %",
+      "recomputed": "47,2",
+      "verdict": "совпадает",
+      "comment": ""
+    },
+    {
+      "article_claim": "зонд, ViT-B/16, 25 изображений/класс = 54,5 %",
+      "recomputed": "54,5",
+      "verdict": "совпадает",
+      "comment": ""
+    },
+    {
+      "article_claim": "зонд, ConvNeXt-Tiny, 25 изображений/класс = 55,0 %",
+      "recomputed": "55,0",
+      "verdict": "совпадает",
+      "comment": ""
+    },
+    {
+      "article_claim": "зонд, ResNet-50, 25 изображений/класс = 30,5 %",
+      "recomputed": "30,5",
+      "verdict": "совпадает",
+      "comment": ""
+    },
+    {
+      "article_claim": "ConvNeXt-Tiny: удвоение выборки добавляет 5,9 п.п.",
+      "recomputed": "5.90 п.п.",
+      "verdict": "совпадает",
+      "comment": ""
+    },
+    {
+      "article_claim": "ResNet-50: удвоение выборки добавляет 16,7 п.п.",
+      "recomputed": "16.71 п.п.",
+      "verdict": "совпадает",
+      "comment": ""
+    },
+    {
+      "article_claim": "ViT-B/16: удвоение выборки добавляет 7,5 п.п.",
+      "recomputed": "7.52 п.п.",
+      "verdict": "совпадает",
+      "comment": ""
+    },
+    {
+      "article_claim": "на 5–10 изображениях ResNet-50 растёт немонотонно",
+      "recomputed": "24.9 % → 24.5 %",
+      "verdict": "совпадает",
+      "comment": ""
+    },
+    {
+      "article_claim": "20 ядер",
+      "recomputed": "20",
+      "verdict": "совпадает",
+      "comment": "подтверждено stand_info.json"
+    },
+    {
+      "article_claim": "121,6 ГБ памяти",
+      "recomputed": "121.6",
+      "verdict": "совпадает",
+      "comment": "подтверждено stand_info.json"
+    },
+    {
+      "article_claim": "CUDA 13.0",
+      "recomputed": "13.0",
+      "verdict": "совпадает",
+      "comment": "подтверждено stand_info.json"
+    },
+    {
+      "article_claim": "PyTorch 2.14.0",
+      "recomputed": "2.14.0",
+      "verdict": "совпадает",
+      "comment": "подтверждено stand_info.json"
+    },
+    {
+      "article_claim": "torchvision 0.29.0",
+      "recomputed": "0.29.0",
+      "verdict": "совпадает",
+      "comment": "подтверждено stand_info.json"
+    }
+  ],
+  "verified_true": 72,
+  "mismatches": [],
+  "unverifiable": [
+    "10× Cortex-X925 и 10× Cortex-A725: модели ядер отсутствуют в stand_info.json, источник — документация NVIDIA/ASUS.",
+    "6144 CUDA-ядра: нет в stand_info.json и bench_raw.json, источник — документация производителя.",
+    "до 1 ПФЛОП FP4 и TDP 140 Вт: паспортные характеристики, в измерениях не проверялись.",
+    "Ubuntu 24.04.4: stand_info.json хранит строку платформы, но не версию дистрибутива (проверено отдельно: /etc/os-release на стенде).",
+    "Food-101: 101 000 фотографий и лицензия CC BY 4.0 — внешние свойства набора данных.",
+    "Разрешение 224×224, прогрев ≥ 1 с, окно ≥ 2 с, интервал NVML 20 мс: заданы кодом (src/features.py, src/bench.py, src/common.py), а не записаны в JSON.",
+    "«BF16 практически повторяет FP16»: без числового допуска строгая проверка невозможна.",
+    "Библиографические данные (годы, тома, DOI, даты обращения) проверялись по Crossref/arXiv/документации, а не по файлам измерений."
+  ]
+}
