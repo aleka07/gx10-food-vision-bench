@@ -1,0 +1,30 @@
+{
+  "feature_file": "../results/features_vit_b_16.npz",
+  "seed": 42,
+  "points": [
+    {
+      "per_class": 5,
+      "train_images": 505,
+      "top1": 0.2384,
+      "test_images": 2525
+    },
+    {
+      "per_class": 10,
+      "train_images": 1010,
+      "top1": 0.2935,
+      "test_images": 2525
+    },
+    {
+      "per_class": 25,
+      "train_images": 2525,
+      "top1": 0.5402,
+      "test_images": 2525
+    },
+    {
+      "per_class": 50,
+      "train_images": 5050,
+      "top1": 0.6206,
+      "test_images": 2525
+    }
+  ]
+}

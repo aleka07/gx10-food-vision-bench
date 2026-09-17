@@ -1,0 +1,30 @@
+{
+  "feature_file": "/home/gx10-11/paper-gx10-vision/results/features_convnext_tiny.npz",
+  "seed": 42,
+  "points": [
+    {
+      "per_class": 5,
+      "train_images": 505,
+      "top1": 0.2455,
+      "test_images": 2525
+    },
+    {
+      "per_class": 10,
+      "train_images": 1010,
+      "top1": 0.3022,
+      "test_images": 2525
+    },
+    {
+      "per_class": 25,
+      "train_images": 2525,
+      "top1": 0.5616,
+      "test_images": 2525
+    },
+    {
+      "per_class": 50,
+      "train_images": 5050,
+      "top1": 0.6087,
+      "test_images": 2525
+    }
+  ]
+}

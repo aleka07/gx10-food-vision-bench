@@ -1,0 +1,16 @@
+# Measured on ASUS Ascent GX10 (NVIDIA GB10, aarch64, CUDA 13.0)
+# Install exactly like this on the stand:
+#   python3 -m venv .venv
+#   .venv/bin/pip install torch==2.14.0 torchvision==0.29.0 \
+#       --index-url https://download.pytorch.org/whl/cu130
+#   .venv/bin/pip install -r requirements.txt
+torch==2.14.0
+torchvision==0.29.0
+numpy>=2.0
+pillow>=11.0
+pandas>=2.2
+matplotlib>=3.9
+huggingface_hub>=0.34
+pyarrow>=18.0
+nvidia-ml-py>=12.560
+tqdm>=4.66

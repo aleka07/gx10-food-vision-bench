@@ -1,0 +1,71 @@
+{
+  "resnet50": {
+    "train": {
+      "backbone": "resnet50",
+      "device": "cuda",
+      "precision": "fp16",
+      "images": 5050,
+      "feature_dim": 2048,
+      "resolution": 224,
+      "extract_seconds": 6.124,
+      "images_per_second": 824.59
+    },
+    "test": {
+      "backbone": "resnet50",
+      "device": "cuda",
+      "precision": "fp16",
+      "images": 2525,
+      "feature_dim": 2048,
+      "resolution": 224,
+      "extract_seconds": 2.738,
+      "images_per_second": 922.37
+    },
+    "file": "/home/gx10-11/paper-gx10-vision/results/features_resnet50.npz"
+  },
+  "convnext_tiny": {
+    "train": {
+      "backbone": "convnext_tiny",
+      "device": "cuda",
+      "precision": "fp16",
+      "images": 5050,
+      "feature_dim": 768,
+      "resolution": 224,
+      "extract_seconds": 4.682,
+      "images_per_second": 1078.68
+    },
+    "test": {
+      "backbone": "convnext_tiny",
+      "device": "cuda",
+      "precision": "fp16",
+      "images": 2525,
+      "feature_dim": 768,
+      "resolution": 224,
+      "extract_seconds": 2.096,
+      "images_per_second": 1204.65
+    },
+    "file": "/home/gx10-11/paper-gx10-vision/results/features_convnext_tiny.npz"
+  },
+  "vit_b_16": {
+    "train": {
+      "backbone": "vit_b_16",
+      "device": "cuda",
+      "precision": "fp16",
+      "images": 5050,
+      "feature_dim": 768,
+      "resolution": 224,
+      "extract_seconds": 5.087,
+      "images_per_second": 992.79
+    },
+    "test": {
+      "backbone": "vit_b_16",
+      "device": "cuda",
+      "precision": "fp16",
+      "images": 2525,
+      "feature_dim": 768,
+      "resolution": 224,
+      "extract_seconds": 2.673,
+      "images_per_second": 944.54
+    },
+    "file": "/home/gx10-11/paper-gx10-vision/results/features_vit_b_16.npz"
+  }
+}

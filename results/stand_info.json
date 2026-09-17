@@ -1,0 +1,15 @@
+{
+  "hostname": "gx10-7897",
+  "machine": "aarch64",
+  "processor": "aarch64",
+  "python": "3.12.3",
+  "torch": "2.14.0+cu130",
+  "cpu_count": 20,
+  "kernel": "6.17.0-1026-nvidia",
+  "os": "Linux-6.17.0-1026-nvidia-aarch64-with-glibc2.39",
+  "torchvision": "0.29.0+cu130",
+  "gpu_name": "NVIDIA GB10",
+  "gpu_capability": "12.1",
+  "gpu_total_mem_gib": 121.6,
+  "cuda": "13.0"
+}

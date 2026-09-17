@@ -1,0 +1,30 @@
+{
+  "feature_file": "../results/features_resnet50.npz",
+  "seed": 43,
+  "points": [
+    {
+      "per_class": 5,
+      "train_images": 505,
+      "top1": 0.2547,
+      "test_images": 2525
+    },
+    {
+      "per_class": 10,
+      "train_images": 1010,
+      "top1": 0.2487,
+      "test_images": 2525
+    },
+    {
+      "per_class": 25,
+      "train_images": 2525,
+      "top1": 0.2974,
+      "test_images": 2525
+    },
+    {
+      "per_class": 50,
+      "train_images": 5050,
+      "top1": 0.4721,
+      "test_images": 2525
+    }
+  ]
+}
